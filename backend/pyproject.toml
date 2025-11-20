@@ -1,0 +1,13 @@
+[project]
+name = "basic-llm-deploy"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "httpx>=0.28.1",
+    "mistralai>=1.9.11",
+]

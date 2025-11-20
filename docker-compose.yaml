@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: basic-llm-api
+    env_file:
+      - .env
+    ipc: host
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
+  bot:
+    build:
+      context: ./tg_bot
+      dockerfile: Dockerfile
+    container_name: llm-telegram-bot
+    restart: unless-stopped
+    depends_on:
+      - api
+    ipc: host
+    environment:
+      BOT_TOKEN: "${BOT_TOKEN}"
+
