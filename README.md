@@ -2,11 +2,11 @@
 
 Установите Ollama согласно официальной документации:
 
-Linux / macOS
+Linux 
 ```shell
 curl -fsSL https://ollama.com/install.sh | sh
 ```
-Windows
+Windows / macOS
 
 Скачать установщик можно на сайте Ollama.
 
