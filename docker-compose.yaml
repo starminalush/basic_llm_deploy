@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: basic-llm-api
     env_file:
-      - .env
+      - .env.template
     ipc: host
     restart: unless-stopped
     ports:
